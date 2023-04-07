@@ -46,6 +46,7 @@ final class TaskListViewController: UITableViewController {
         
         let currentTaskCount = taskList.tasks.filter("isComplete = false").count
         let taskCount = taskList.tasks.count
+        
         if currentTaskCount == 0 {
             cell.accessoryType = .checkmark
         } else {
@@ -130,7 +131,6 @@ extension TaskListViewController {
             
             self?.save(taskListTitle: newValue)
         }
-        
         present(alert, animated: true)
     }
     
